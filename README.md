@@ -7,8 +7,8 @@ Cada dimensão tem seu próprio id e nome, além de ser vinculado em perguntas/t
 ## Como iniciar o projeto
 
 1. Crie um banco de dados, atualize o arquivo .env com os dados do seu banco e localhost;
-2. Use as migrations do Laravel para criar as tabelas do sistema com o comando 'php artisan migrate', lembre-se que a tabela dimensions deve ser criada primeiro, pois seu ID é chave estrangeira da tabela tasks;
-3. Instale as dependências do projeto com os comandos 'npm i' e 'composer i';
+2. Instale as dependências do projeto com os comandos 'npm i' e 'composer i';
+3. Use as migrations do Laravel para criar as tabelas do sistema com o comando 'php artisan migrate', lembre-se que a tabela dimensions deve ser criada primeiro, pois seu ID é chave estrangeira da tabela tasks;
 4. Rode o projeto com os comandos 'php artisan serve' para iniciar o servidor Laravel e 'npm run watch' para atualizar quaisquer parte que achar relevante no Vue.
    Lembrando que é necessário ter o PHP, Composer e Node instalado na máquina para executar um projeto Laravel + Vue.
 
