@@ -13,7 +13,8 @@
             color="primary"
             @click="createModal = true"
           >
-            <v-icon left>mdi-plus</v-icon> Criar dimensão</v-btn
+            <v-icon left>mdi-plus</v-icon>
+            <span v-if="!isMobile">Criar </span> &nbsp; dimensão</v-btn
           >
         </v-col>
       </v-row>
@@ -57,35 +58,19 @@
               >
                 <v-btn
                   depressed
-                  v-if="isMobile"
                   color="primary"
                   class="border-zero"
                   @click="openEditModal(dimension)"
-                  ><v-icon center>mdi-pencil</v-icon></v-btn
+                  ><v-icon center v-if="isMobile">mdi-pencil</v-icon
+                  ><span v-else>Editar</span></v-btn
                 >
                 <v-btn
                   depressed
-                  v-else
-                  color="primary"
-                  class="border-zero"
-                  @click="openEditModal(dimension)"
-                  >Editar</v-btn
-                >
-                <v-btn
-                  depressed
-                  v-if="isMobile"
-                  color="error"
-                  class="border-zero"
-                  @click="openDeleteModal(dimension)"
-                  ><v-icon center>mdi-delete</v-icon></v-btn
-                >
-                <v-btn
-                  depressed
-                  v-else
                   color="error"
                   @click="openDeleteModal(dimension)"
                   class="border-zero"
-                  >Excluir</v-btn
+                  ><v-icon center v-if="isMobile">mdi-delete</v-icon
+                  ><span v-else>Excluir</span></v-btn
                 >
               </v-col>
             </v-col>

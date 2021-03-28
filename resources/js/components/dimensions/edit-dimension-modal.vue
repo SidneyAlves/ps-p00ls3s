@@ -3,7 +3,7 @@
     <v-dialog v-model="dialog" persistent width="800">
       <v-card>
         <v-card-title class="headline grey lighten-2" style="color: #656565">
-          Editar Pergunta
+          Editar Dimensão
         </v-card-title>
 
         <v-container>

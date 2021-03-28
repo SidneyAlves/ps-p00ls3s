@@ -22,7 +22,8 @@
             color="primary"
             @click="createModal = true"
           >
-            <v-icon left>mdi-plus</v-icon> Criar pergunta</v-btn
+            <v-icon left>mdi-plus</v-icon>
+            <span v-if="!isMobile">Criar </span> &nbsp; pergunta</v-btn
           >
         </v-col>
       </v-row>
@@ -51,6 +52,12 @@
                 v-model="task.active"
                 @click="openChangeDimensionModal(task)"
               ></v-checkbox>
+              <v-btn
+                depressed
+                color="primary"
+                class="border-zero"
+                @click="openEditModal(dimension)"
+              ></v-btn>
             </v-col>
             <v-col
               md="2"
@@ -83,35 +90,19 @@
               >
                 <v-btn
                   depressed
-                  v-if="isMobile"
                   color="primary"
                   class="border-zero"
                   @click="openEditModal(task)"
-                  ><v-icon center>mdi-pencil</v-icon></v-btn
+                  ><v-icon center v-if="isMobile">mdi-pencil</v-icon
+                  ><span v-else>Editar</span></v-btn
                 >
                 <v-btn
                   depressed
-                  v-else
-                  color="primary"
-                  class="border-zero"
-                  @click="openEditModal(task)"
-                  >Editar</v-btn
-                >
-                <v-btn
-                  depressed
-                  v-if="isMobile"
-                  color="error"
-                  class="border-zero"
-                  @click="openDeleteModal(task)"
-                  ><v-icon center>mdi-delete</v-icon></v-btn
-                >
-                <v-btn
-                  depressed
-                  v-else
                   color="error"
                   @click="openDeleteModal(task)"
                   class="border-zero"
-                  >Excluir</v-btn
+                  ><v-icon center v-if="isMobile">mdi-delete</v-icon>
+                  <span v-else>Excluir</span></v-btn
                 >
               </v-col>
             </v-col>

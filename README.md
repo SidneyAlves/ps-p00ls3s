@@ -1,4 +1,4 @@
-## Desafio Pulses
+## Desafio
 
 O desafio consiste em criar um sistema web de CRUD de Perguntas/Tarefas e Dimensões utilizando Vue no front end e um back end PHP. Foi utilizado o Vuetify e o Laravel para o auxílio do desenvolvimento.
 Cada tarefa tem seu próprio id, nome (a pergunta em si), uma dimensão (foreign key), e seu status (ativo ou não).
@@ -6,7 +6,7 @@ Cada dimensão tem seu próprio id e nome, além de ser vinculado em perguntas/t
 
 ## Como iniciar o projeto
 
-1. Crie um banco de dados, atualize o arquivo .env com os dados do seu banco e localhost;
+1. Crie um banco de dados, atualize o arquivo .env com os dados do seu banco e localhost, use o .env.example como base;
 2. Instale as dependências do projeto com os comandos 'npm i' e 'composer i';
 3. Use as migrations do Laravel para criar as tabelas do sistema com o comando 'php artisan migrate', lembre-se que a tabela dimensions deve ser criada primeiro, pois seu ID é chave estrangeira da tabela tasks;
 4. Rode o projeto com os comandos 'php artisan serve' para iniciar o servidor Laravel e 'npm run watch' para atualizar quaisquer parte que achar relevante no Vue.
@@ -36,6 +36,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 -   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+php artisan serve
 
 ## Learning Laravel
 
